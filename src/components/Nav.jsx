@@ -1,6 +1,18 @@
 import {Link} from "react-router-dom";
+import {useState} from "react";
 
 function Nav(){
+    const [isVisible, setIsVisible] = useState(false);
+    return (
+        <>
+        <button onClick={() => setIsVisible(!isVisible)}>X</button>
+        {isVisible && <Sidebar />}
+        </>
+    );
+}
+
+
+function Sidebar(){
     return (
         <nav className="sidenav">
             <li>
