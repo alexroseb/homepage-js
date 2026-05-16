@@ -48,7 +48,7 @@ function AnimateRoutes(){
             path="/tech3"
             element = {
               <>
-              <Nav />
+                <Nav />
                 <PageWrapper>
                   <Tech3 />
                 </PageWrapper>
