@@ -1,7 +1,7 @@
 function Tech2(){
   return (
     <>
-      <div>Tech 2</div>
+      <div className="classpg">Tech 2</div>
     </>
   );
 }
