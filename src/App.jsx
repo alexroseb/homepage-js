@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes, Route, useLocation, Link} from "react-router-dom";
 import {AnimatePresence, motion} from "framer-motion";
-import './App.css';
+import './styles/App.css';
 import Home from "./components/Home";
 import Tech1 from "./components/Tech1";
 import Tech2 from "./components/Tech2";
@@ -25,33 +25,45 @@ function AnimateRoutes(){
           <Route 
             path="/tech1"
             element = {
-              <PageWrapper>
-                <Tech1 />
-              </PageWrapper>
+              <>
+                <Nav />
+                <PageWrapper>
+                  <Tech1 />
+                </PageWrapper>
+              </>
             }
             />
             <Route 
             path="/tech2"
             element = {
-              <PageWrapper>
-                <Tech2 />
-              </PageWrapper>
+              <>
+                <Nav />
+                <PageWrapper>
+                  <Tech2 />
+                </PageWrapper>
+              </>
             }
             />
           <Route 
             path="/tech3"
             element = {
-              <PageWrapper>
-                <Tech3 />
-              </PageWrapper>
+              <>
+              <Nav />
+                <PageWrapper>
+                  <Tech3 />
+                </PageWrapper>
+              </>
             }
             />
           <Route 
             path="/exploratory"
             element = {
-              <PageWrapper>
-                <Exploratory />
-              </PageWrapper>
+              <>
+                <Nav />
+                <PageWrapper>
+                  <Exploratory />
+                </PageWrapper>
+              </>
             }
             />
         </Routes>
@@ -62,9 +74,9 @@ function AnimateRoutes(){
 function PageWrapper ({children}){
   return (
     <motion.div
-      initial={{opacity: 0, y: 20}}
-      animate={{opacity: 1, y: 0}}
-      exit={{opacity: 0, y: -20}}
+      initial={{opacity: 0, x: 20}}
+      animate={{opacity: 1, x: 0}}
+      exit={{opacity: 0, x: -20}}
       transition = {{duration: .5}}
   >
     {children}
@@ -76,7 +88,6 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Nav />
         <AnimateRoutes />
       </BrowserRouter>
     </>
