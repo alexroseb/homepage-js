@@ -5,18 +5,18 @@ function Home(){
     <>
       <h1>Programming and Web Development</h1>
       <div className="courses">
-          <div className="exp">
-            <h2><Link to="/exploratory">Exploratory</Link></h2>
-          </div>
-          <div className="t1">
-            <h2><Link to="/tech1">Tech 1</Link></h2>
-          </div>
-          <div className="t2">
-            <h2><Link to="/tech2">Tech 2</Link></h2>
-          </div>
-          <div className="t3">
-            <h2><Link to="/tech3">Tech 3</Link></h2>
-          </div>
+          <Link to="/exploratory" className="exp"><div>
+            <h2>Exploratory</h2>
+          </div></Link>
+          <Link to="/tech1" className="t1"><div>
+            <h2>Tech 1</h2>
+          </div></Link>
+          <Link to="/tech2" className="t2"><div>
+            <h2>Tech 2</h2>
+          </div></Link>
+          <Link to="/tech3" className="t3"><div>
+            <h2>Tech 3</h2>
+          </div></Link>
       </div>
     </>
   );

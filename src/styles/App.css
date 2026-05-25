@@ -1,15 +1,48 @@
+/* Home page */
 .courses{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.courses > div {
-  margin: auto;
+.courses > a {
+  display:flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid black;
   width: 20%;
+  height: 20vh;
+  text-decoration: none;
 }
 
+.courses > a:hover div h2{
+    color:white;
+}
+
+/* Gradients created with https://cssgradient.io/ */
+
+.exp{
+  background: #91ff78;
+  background: radial-gradient(circle, rgba(145, 255, 120, 1) 0%, rgba(0, 148, 42, 1) 100%);
+}
+
+.t1 {
+  background: #ff787a;
+  background: radial-gradient(circle, rgba(255, 120, 122, 1) 0%, rgba(255, 0, 4, 1) 100%);
+}
+
+.t2 {
+  background: #ed46fc;
+  background: radial-gradient(circle, rgba(237, 70, 252, 1) 0%, rgba(157, 63, 251, 1) 100%);
+}
+
+.t3 {
+  background: #46DEFC;
+  background: radial-gradient(circle, rgba(70, 222, 252, 1) 0%, rgba(63, 94, 251, 1) 100%);
+}
+
+/* Sidebar */
 .explink {
   font-size: 16px !important;
 }
